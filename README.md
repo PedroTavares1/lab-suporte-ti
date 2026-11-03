@@ -9,7 +9,7 @@ Runbooks escritos a partir de problemas reproduzidos em máquinas virtuais (Wind
 | Nº | Runbook | Ambiente | Testado em |
 | --- | --- | --- | --- |
 | 01 | [Computador sem internet](runbooks/01-pc-sem-internet.md) | Windows 11 | 03/11/2026 |
-| 03 | [Não consigo imprimir](runbooks/03-impressora-nao-imprime.md) | Windows 11 | 27/10/2026 |
+| 03 | [Não consigo imprimir](runbooks/03-impressora-nao-imprime.md) | Windows 11 | 03/11/2026 |
 
 A numeração segue o plano de 8 chamados do laboratório; os demais entram conforme forem concluídos.
 
@@ -29,7 +29,7 @@ Runbooks (step-by-step support guides) written from problems I reproduced on vir
 | No. | Runbook | Environment | Tested on |
 | --- | --- | --- | --- |
 | 01 | [Computer without internet](runbooks/01-pc-sem-internet.md) (in Portuguese) | Windows 11 | 2026-11-03 |
-| 03 | [Cannot print](runbooks/03-impressora-nao-imprime.md) (in Portuguese) | Windows 11 | 2026-10-27 |
+| 03 | [Cannot print](runbooks/03-impressora-nao-imprime.md) (in Portuguese) | Windows 11 | 2026-11-03 |
 
 The runbooks are written in Portuguese, and the screenshots come from a Portuguese (pt-BR) version of Windows. English versions of the runbooks are planned.
 
