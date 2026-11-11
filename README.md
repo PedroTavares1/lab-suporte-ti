@@ -14,6 +14,7 @@ Runbooks escritos a partir de problemas reproduzidos em máquinas virtuais (Wind
 | 04 | [O computador está lento](runbooks/04-computador-lento.md) | Windows 11 | 04/11/2026 |
 | 05 | [O disco está cheio](runbooks/05-disco-cheio.md) | Windows 11 | 03/11/2026 |
 | 06 | [Apaguei um arquivo importante](runbooks/06-apaguei-um-arquivo-importante.md) | Windows 11 | 05/11/2026 |
+| 07 | [Preciso instalar um programa](runbooks/07-preciso-instalar-um-programa.md) | Windows 11 | 11/11/2026 |
 
 A numeração segue o plano de 8 chamados do laboratório; os demais entram conforme forem concluídos.
 
@@ -38,6 +39,7 @@ Runbooks (step-by-step support guides) written from problems I reproduced on vir
 | 04 | [The computer is slow](runbooks/04-computador-lento.md) (in Portuguese) | Windows 11 | 2026-11-04 |
 | 05 | [The disk is full](runbooks/05-disco-cheio.md) (in Portuguese) | Windows 11 | 2026-11-03 |
 | 06 | [I deleted an important file](runbooks/06-apaguei-um-arquivo-importante.md) (in Portuguese) | Windows 11 | 2026-11-05 |
+| 07 | [I need to install a program](runbooks/07-preciso-instalar-um-programa.md) (in Portuguese) | Windows 11 | 2026-11-11 |
 
 The runbooks are written in Portuguese, and the screenshots come from a Portuguese (pt-BR) version of Windows. English versions of the runbooks are planned.
 
