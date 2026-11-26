@@ -4,12 +4,13 @@
 
 ## Português
 
-Runbooks escritos a partir de problemas reproduzidos em máquinas virtuais (Windows 11). Todos os dados são fictícios; este repositório não tem clientes reais.
+Runbooks escritos a partir de problemas reproduzidos em máquinas virtuais (Windows 11 e Ubuntu). Todos os dados são fictícios; este repositório não tem clientes reais.
 
 | Nº | Runbook | Ambiente | Testado em |
 | --- | --- | --- | --- |
 | 01 | [Computador sem internet](runbooks/01-pc-sem-internet.md) | Windows 11 | 03/11/2026 |
 | 02 | [Esqueci a senha e minha conta bloqueou](runbooks/02-esqueci-a-senha-conta-bloqueada.md) | Windows 11 | 03/11/2026 |
+| 02 | [Esqueci a senha e minha conta bloqueou](runbooks/02-esqueci-a-senha-conta-bloqueada-ubuntu.md) | Ubuntu 26.04 | 25/11/2026 |
 | 03 | [Não consigo imprimir](runbooks/03-impressora-nao-imprime.md) | Windows 11 | 03/11/2026 |
 | 04 | [O computador está lento](runbooks/04-computador-lento.md) | Windows 11 | 04/11/2026 |
 | 05 | [O disco está cheio](runbooks/05-disco-cheio.md) | Windows 11 | 03/11/2026 |
@@ -17,7 +18,7 @@ Runbooks escritos a partir de problemas reproduzidos em máquinas virtuais (Wind
 | 07 | [Preciso instalar um programa](runbooks/07-preciso-instalar-um-programa.md) | Windows 11 | 11/11/2026 |
 | 08 | [Preciso do inventário das máquinas](runbooks/08-preciso-do-inventario-das-maquinas.md) | Windows 11 | 11/11/2026 |
 
-A numeração segue o plano de 8 chamados do laboratório; os demais entram conforme forem concluídos.
+A numeração segue o plano de 8 chamados do laboratório. Os 8 de Windows já estão aqui. Alguns temas também são refeitos no Ubuntu, com o mesmo número e o sufixo `-ubuntu` no nome do arquivo; esses entram conforme forem concluídos.
 
 ### Como cada runbook foi feito
 Provoquei o problema em uma máquina virtual, diagnostiquei com comandos, resolvi, verifiquei e registrei o resultado. Os prints de cada ensaio estão na pasta [prints](prints).
@@ -25,17 +26,20 @@ Provoquei o problema em uma máquina virtual, diagnostiquei com comandos, resolv
 ### Ambiente de teste
 VirtualBox com Windows 11 Enterprise Evaluation (10.0.22000.194), em uma máquina virtual descartável com ponto de restauração (snapshot) chamado "Limpo".
 
+Os runbooks de Ubuntu foram feitos no Ubuntu 26.04.1 LTS, em outra máquina virtual descartável do VirtualBox, também com um snapshot chamado "Limpo".
+
 ### Sobre mim
 Pedro Henrique, Recife-PE, em transição para suporte de TI. LinkedIn: https://www.linkedin.com/in/pedrotavaress-
 
 ## English
 
-Runbooks (step-by-step support guides) written from problems I reproduced on virtual machines (Windows 11). All data is fictional; this repository has no real customers.
+Runbooks (step-by-step support guides) written from problems I reproduced on virtual machines (Windows 11 and Ubuntu). All data is fictional; this repository has no real customers.
 
 | No. | Runbook | Environment | Tested on |
 | --- | --- | --- | --- |
 | 01 | [Computer without internet](runbooks/01-pc-sem-internet.md) (in Portuguese) | Windows 11 | 2026-11-03 |
 | 02 | [Forgot my password and my account got locked](runbooks/02-esqueci-a-senha-conta-bloqueada.md) (in Portuguese) | Windows 11 | 2026-11-03 |
+| 02 | [Forgot my password and my account got locked](runbooks/02-esqueci-a-senha-conta-bloqueada-ubuntu.md) (in Portuguese) | Ubuntu 26.04 | 2026-11-25 |
 | 03 | [Cannot print](runbooks/03-impressora-nao-imprime.md) (in Portuguese) | Windows 11 | 2026-11-03 |
 | 04 | [The computer is slow](runbooks/04-computador-lento.md) (in Portuguese) | Windows 11 | 2026-11-04 |
 | 05 | [The disk is full](runbooks/05-disco-cheio.md) (in Portuguese) | Windows 11 | 2026-11-03 |
@@ -43,15 +47,17 @@ Runbooks (step-by-step support guides) written from problems I reproduced on vir
 | 07 | [I need to install a program](runbooks/07-preciso-instalar-um-programa.md) (in Portuguese) | Windows 11 | 2026-11-11 |
 | 08 | [I need an inventory of the machines](runbooks/08-preciso-do-inventario-das-maquinas.md) (in Portuguese) | Windows 11 | 2026-11-11 |
 
-The runbooks are written in Portuguese, and the screenshots come from a Portuguese (pt-BR) version of Windows. English versions of the runbooks are planned.
+The runbooks are written in Portuguese. The Windows screenshots come from a Portuguese (pt-BR) version of Windows; in the Ubuntu screenshots the system messages are in English. English versions of the runbooks are planned.
 
-The numbering follows the lab's plan of 8 support tickets; the others are added as they are completed.
+The numbering follows the lab's plan of 8 support tickets. All 8 Windows tickets are here. Some topics are also redone on Ubuntu, with the same number and the suffix `-ubuntu` in the file name; those are added as they are completed.
 
 ### How each runbook was made
 I reproduced the problem on a virtual machine, diagnosed it with commands, fixed it, verified the fix and recorded the result. The screenshots of each test are in the [prints](prints) folder.
 
 ### Test environment
 VirtualBox running Windows 11 Enterprise Evaluation (10.0.22000.194), on a disposable virtual machine with a restore point (snapshot) called "Limpo" (Portuguese for "clean").
+
+The Ubuntu runbooks were made on Ubuntu 26.04.1 LTS, on another disposable VirtualBox virtual machine, also with a snapshot called "Limpo".
 
 ### About me
 Pedro Henrique, from Recife, Brazil, moving into IT support. LinkedIn: https://www.linkedin.com/in/pedrotavaress-
