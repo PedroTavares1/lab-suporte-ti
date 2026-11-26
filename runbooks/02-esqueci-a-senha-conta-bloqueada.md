@@ -94,6 +94,13 @@ Registrar no chamado a mensagem exata da tela e o resultado de `net user` e de `
 - O `net user maria /active:yes` tirou o bloqueio (print 7). Antes do ensaio, isso era uma dúvida.
 - O `PasswordLastSet` veio vazio, como eu esperava (print 8).
 
+## Fontes
+- [net user (Microsoft Learn)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/net-user): o `/active:{yes | no}` ativa ou desativa a conta (o padrão é `yes`), e um asterisco no lugar da senha faz o Windows pedir a senha sem mostrá-la na tela. A página não lista o `/logonpasswordchg:yes` do passo 3 da solução. O efeito dele foi visto no ensaio (prints 8 e 9a).
+- [Account lockout threshold (Microsoft Learn)](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/account-lockout-threshold): define quantas senhas erradas seguidas travam a conta, e o valor 0 significa que a conta nunca trava por senha errada. Uma conta travada só volta a ser usada quando um administrador a libera ou quando termina a duração do bloqueio. A página é do Windows 10.
+- [Account lockout duration (Microsoft Learn)](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/account-lockout-duration): é por quantos minutos a conta travada fica travada antes de se soltar sozinha. Com o valor 0, ela fica travada até um administrador liberar. A página é do Windows 10.
+- [Reset account lockout counter after (Microsoft Learn)](https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/reset-account-lockout-counter-after): é quantos minutos precisam passar depois de uma senha errada para o contador de erros voltar a 0. É a janela em que as senhas erradas se acumulam, a "janela de observação" deste runbook. A página é do Windows 10.
+- [Win32_UserAccount class (Microsoft Learn)](https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-useraccount): `Disabled` é verdadeiro quando a conta está desativada, e `Lockout` é verdadeiro quando a conta está bloqueada. É a diferença usada na consulta do print 5.
+
 ## Evidências
 **Print 1.** `net accounts` antes do defeito, com o limite de proteção em "Nunca".
 ![Print 1: net accounts, limite de proteção Nunca](../prints/win-02-p01-politica-de-bloqueio-antes.png)
