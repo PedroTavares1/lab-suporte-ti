@@ -97,6 +97,11 @@ Nenhuma dessas situações aconteceu no ensaio, então não foram testadas.
 - O segundo arquivo deixou exatamente 2.097.152 bytes (2 MB) livres (print 4).
 - Acrescentei `| Format-Table ...` antes do `Get-Date` nos comandos que mostram tabela. Sem isso, a hora pode não aparecer no PowerShell 5.1.
 
+## Fontes
+- [fsutil file (Microsoft Learn)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-file): o `createnew` cria um arquivo com o nome e o tamanho informados, preenchido com zeros. A página não diz a unidade do tamanho. No ensaio foi bytes: o valor 1073741824 gerou um arquivo de 1.073.741.824 bytes (print 8).
+- [Initialize-Disk (Microsoft Learn)](https://learn.microsoft.com/en-us/powershell/module/storage/initialize-disk): prepara um disco RAW para o primeiro uso, definindo o estilo de partição. O `-PartitionStyle` aceita MBR e GPT, e o padrão é GPT.
+- [Remove-Item (Microsoft Learn)](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item): o cmdlet apaga os itens indicados. A página não fala da Lixeira. A frase de "Antes de começar" dizendo que ele apaga direto, sem passar pela Lixeira, não veio dessa página, e eu não testei isso no ensaio.
+
 ## Evidências
 **Print 1a.** Seletor de discos do VirtualBox, com o disco `Lab-Win11_1.vdi` recém-criado.
 ![Print 1a: seletor de discos com o disco de 2 GB criado](../prints/win-05-p01a-seletor-disco-criado.png)
