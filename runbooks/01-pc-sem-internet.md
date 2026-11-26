@@ -87,6 +87,10 @@ Etiquetar cabos e registrar na ficha da máquina o gateway e o DNS esperados.
 - Nos blocos que juntam `Get-NetAdapter` ou `Get-DnsClientServerAddress` com `Get-Date`, o PowerShell mostra a data em lista. A hora está na linha DateTime (prints 5, 9, 12 e 14).
 - O `nslookup` e o `ping` mostraram endereços diferentes para google.com no print 14 (172.217.162.238 e 142.250.78.110). Isso é esperado: o Google responde com vários endereços.
 
+## Fontes
+- [ipconfig (Microsoft Learn)](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/ipconfig): o `/all` mostra a configuração TCP/IP completa de todos os adaptadores, e o `/flushdns` limpa e reinicia o cache do resolvedor de DNS do cliente. A página não fala da mensagem "mídia desconectada". Que ela apareceu com o cabo virtual desconectado foi visto no ensaio (print 4).
+- [Set-DnsClientServerAddress (Microsoft Learn)](https://learn.microsoft.com/en-us/powershell/module/dnsclient/set-dnsclientserveraddress): o `-ServerAddresses` define os servidores DNS da interface. O `-ResetServerAddresses` apaga a configuração fixa e volta ao padrão, que o Exemplo 2 da página descreve como o definido pelo DHCP na interface.
+
 ## Evidências
 **Print 1.** `ipconfig /all` com a rede saudável.
 ![Print 1: ipconfig /all com a rede saudável](../prints/win-01-p01-ipconfig-rede-saudavel.png)
