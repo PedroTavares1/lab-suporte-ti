@@ -88,6 +88,12 @@ Se repetir no mesmo PC, procurar atualização ou driver de impressora recente e
 - No print 4, a lista de impressoras saiu vazia em um Bloco de Notas aberto depois de parar o serviço. Na primeira tentativa, num Bloco de Notas que já tinha aberto a janela Imprimir antes de parar o serviço, o aviso apareceu e a lista continuou mostrando as três impressoras (print 4b). Não confirmei a causa.
 - A Microsoft Print to PDF é uma impressora virtual. Com ela pausada (prints 10 e 11), a janela de salvar apareceu mesmo assim (print 12), e o `Get-PrintJob` não listou o trabalho (print 13).
 
+## Fontes
+- [Fix print job stuck in queue errors in Windows (Microsoft Support)](https://support.microsoft.com/en-us/windows/fix-print-job-stuck-in-queue-errors-in-windows-9ee21bad-4488-45b5-b497-2d8299bd74aa): o passo de limpar a pasta de spool à mão: parar o serviço Print Spooler, apagar os arquivos de `C:\Windows\System32\spool\PRINTERS` e iniciar o serviço de novo. É o mesmo procedimento da seção "Fila presa: limpar a fila".
+- [Troubleshooting scenarios for printing (Microsoft Learn)](https://learn.microsoft.com/en-us/troubleshoot/windows-server/printing/troubleshoot-printing-scenarios): a pasta de spool padrão é `%systemroot%\System32\Spool\Printers`, e, com a impressão funcionando, os arquivos dela são apagados conforme os trabalhos saem. A página cita os arquivos `.SHD` e `.SPL`, mas não diz o que cada um guarda. A explicação deste runbook (dados do documento e ficha do trabalho) não veio dessa página, e eu não a conferi em outra fonte.
+- [Stop-Service (Microsoft Learn)](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/stop-service): o `-Force` faz parar o serviço mesmo que outros dependam dele, e o Exemplo 3 da página diz que parar esse serviço também para os que dependem dele.
+- [Win32_Printer class (Microsoft Learn)](https://learn.microsoft.com/en-us/windows/win32/cimwin32prov/win32-printer): a classe tem o método `Pause`, que pausa a fila de impressão, e o `Resume`, que retoma uma fila pausada.
+
 ## Evidências
 **Print 1.** `Get-Service` e `Get-Printer` com o spooler rodando.
 ![Print 1: spooler Running e as três impressoras](../prints/win-03-p01-spooler-running-impressoras.png)
